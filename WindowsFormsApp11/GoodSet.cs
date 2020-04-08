@@ -133,16 +133,8 @@ namespace WindowsFormsApp11
             items.AddRange(setFirst.Array); // добавим в items элементы из указаного массива
             for (int i = 0; i < setSecond.Size; i++)
             {
-                // если элемент не содержится в массиве, то добавляем
-                if (!items.Contains(setSecond[i]))
-                {
-                    items.Add(setSecond[i]);
-                }
-                else
-                {
-                    // удаляем
-                    items.Remove(setSecond[i]);
-                }
+                // удаляем
+                items.Remove(setSecond[i]);
             }
 
             var result = new GoodSet(items.ToArray<int>());
